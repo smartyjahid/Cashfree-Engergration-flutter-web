@@ -1,0 +1,54 @@
+extends layout
+
+block content
+  body
+    br
+    br
+    .container.fluid
+      h1(align='center') Cashfree Verification
+      //- .alert.alert-info
+        //- strong Note: 
+        //- |  Please insert your 
+        //- span.label.label-info Secret_key
+        //- |  in request and response files.
+      //- .alert.alert-info
+        //- strong Note: 
+        //- |  Please change 
+        //- span.label.label-info mode
+        //- |  to "TEST" in request if using Test appId/secretKey credentials. Access test credentials 
+        //- a(href='https://test.gocashfree.com/merchant/pg#api-key') here
+        //- |  and production credentials 
+        //- a(href='https://merchant.cashfree.com/merchant/pg#api-key') here
+        | .
+      form#redirectForm(method='post', action='/request')
+       
+        .form-group
+         
+          br
+          input.form-control(input type="hidden" name='orderId' value="145353")
+        .form-group
+          
+          br
+          input.form-control(input type="hidden" name="orderAmount" value= amount)
+        
+        //- .form-group
+        //-   br
+        //-   input.form-control(name='orderNote', placeholder='Enter Order Note here (Ex. Test order)')
+        .form-group
+          br
+          input.form-control(input type="hidden" name='customerName' value= names)
+        .form-group
+          label Email:
+          br
+          input.form-control(name='customerEmail', placeholder='Enter your email address here (Ex. Johndoe@test.com)')
+        .form-group
+          label Phone:
+          br
+          input.form-control(name='customerPhone', placeholder='Enter your phone number here (Ex. 9999999999)')
+        
+       
+        button.btn.btn-primary.btn-block(type='submit', value='Pay') Verify & Submit
+        br
+        br
+        br
+        br
