@@ -14,4 +14,6 @@ update AppID and SecertKay In Views/Request.jade<br>
      now Just Run it
      <br>
      npm app.js or nodemon --exec npm start
+     
+  then visit here- "localhost:3000/name=jahid&amount=20"
 
