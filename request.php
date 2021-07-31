@@ -12,8 +12,8 @@
 $mode = "TEST"; //<------------ Change to TEST for test server, PROD for production
 
 extract($_POST);
-  $secretKey = "805d837b2f2fae962330d75b0b834b1d2c4e196e";
-  $appId = "831790f2ba6e4fb6a37d0b40c97138";
+  $secretKey = "secretkey";
+  $appId = "appid";
   $orderId = time();
   $orderAmount = $orderAmount;
   $returnUrl = "http://cfentergrition.myartsonline.com/response.php";
