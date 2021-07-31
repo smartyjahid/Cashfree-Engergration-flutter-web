@@ -22,7 +22,7 @@ app.use('/', indexRouter);
 app.post('/request',function(req, res, next){
 
 	var postData = {
-		"appId" : "831790f2ba6e4fb6a37d0b40c97138",
+		"appId" : "app id",
 		"orderId" : req.body.orderId,
 		"orderAmount" : req.body.orderAmount,
 		// "orderCurrency" : req.body.orderCurrency,
@@ -34,7 +34,7 @@ app.post('/request',function(req, res, next){
 		// "notifyUrl" : req.body.notifyUrl
 	},
 	mode = "TEST",
-	secretKey = "805d837b2f2fae962330d75b0b834b1d2c4e196e",
+	secretKey = "secretkey",
 	sortedkeys = Object.keys(postData),
 	url="",
 	signatureData = "";
@@ -64,7 +64,7 @@ app.post('/response',function(req, res, next){
 	  "txMsg" : req.body.txMsg,
 	  "txTime" : req.body.txTime
 	 },
-	secretKey = "805d837b2f2fae962330d75b0b834b1d2c4e196e",
+	secretKey = "secretkey",
 
 	signatureData = "";
 	for (var key in postData) {
